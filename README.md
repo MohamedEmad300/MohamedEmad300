@@ -1,5 +1,5 @@
 #                                                                        Hey there I'm Mohamed
-🔭 I mostly work with LLM's and computer vision <br>
+🔭 I mostly work on LLM's and computer vision projects <br>
 🌱 I’m currently learning cloud computing via AWS <br>
 👯 I would like to contribute to llama-cpp-python<br>
 📫 you can reach me via my email: mohamed_Emad66553@outlook.com <br>
