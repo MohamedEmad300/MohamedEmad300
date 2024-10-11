@@ -34,7 +34,7 @@
 
 ---
 <p align="center">
-<img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=nicknochnack&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
+<img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=UndeadZed&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
 </p> 
 <p align="center">
 <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=UndeadZed&&theme=dark&hide_border=true" alt="Mohamed Emad's streak status"/>
