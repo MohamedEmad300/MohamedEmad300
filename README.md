@@ -31,6 +31,7 @@
 <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> 
 <a href="#" target="_blank" rel="noreferrer"><img align="left" alt="Terminal" width="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" height="40"/> </a>
 </p>
+<a href="https://www.langchain.com" target="_blank" rel="noreferrer"> <img src="https://github.com/simple-icons/simple-icons/blob/master/icons/langchain.svg" alt="Langchain" width="40" height="40"/> </a> 
 
 ---
 <p align="center">
