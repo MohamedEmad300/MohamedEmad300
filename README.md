@@ -37,5 +37,5 @@
 <img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=UndeadZed&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
 </p> 
 <p align="center">
-  ![GitHub Streak](https://streak-stats.demolab.com/?user=UndeadZed&theme=dark)
+  [GitHub Streak](https://streak-stats.demolab.com/?user=UndeadZed&theme=dark)
 </p>
