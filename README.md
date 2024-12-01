@@ -37,5 +37,5 @@
 <img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=UndeadZed&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
 </p> 
 <p align="center">
-  <img src="https://img.shields.io/github/streak/UndeadZed?style=flat-square" alt="GitHub Streak" />
+  [![GitHub streak](https://img.shields.io/github/streak/DenverCoder1?style=flat-square)](https://git.io/streak-stats)
 </p>
