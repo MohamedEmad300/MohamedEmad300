@@ -33,7 +33,10 @@
 <a href="https://www.langchain.com" target="_blank" rel="noreferrer"> <img src="https://github.com/simple-icons/simple-icons/blob/master/icons/langchain.svg" alt="Langchain" width="40" height="40"/> </a> 
 
 ---
+
+<div style="text-align: center;">
+  [![GitHub Streak](https://streak-stats.demolab.com/?user=UndeadZed&theme=dark)](https://git.io/streak-stats)
+</div>
 <p align="center">
-[![GitHub Streak](https://streak-stats.demolab.com/?user=UndeadZed&theme=dark)](https://git.io/streak-stats)
 <img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=UndeadZed&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
 </p>
