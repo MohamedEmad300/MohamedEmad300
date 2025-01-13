@@ -1,7 +1,7 @@
 #                                                                        Hey there I'm Mohamed Emad
 🔭 I mostly work on LLM's and computer vision projects <br>
 🌱 I’m currently learning more about Cross-Modal Learning <br>
-👯 I would like to contribute to llama-cpp-python <br>
+👯 My goal is to contribute to at least 10 AI related projects by the end of 2025 <br>
 📫 you can reach me via my email: mohamed_Emad66553@outlook.com <br>
 ⚡ Fun fact: I like creating digital art (I'm bad at it tho)
 
