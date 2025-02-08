@@ -2,7 +2,7 @@
 🔭 I mostly work on LLM's and computer vision projects <br>
 🌱 I’m currently learning more about Cross-Modal Learning <br>
 👯 My goal is to contribute to at least 10 AI related projects by the end of 2025 <br>
-📫 you can reach me via my email: mohamed_Emad66553@outlook.com <br>
+📫 you can reach me via my email: mohamedemad66553@gmail.com <br>
 ⚡ Fun fact: I like creating digital art (I'm bad at it tho)
 
 
@@ -35,7 +35,7 @@
 ---
 
 <p align="center">
-<img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=UndeadZed&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
+<img align="center" alt="Mohamed Emad's Github Stats" src="https://github-readme-stats.vercel.app/api?username=MohamedEmad300&show_icons=true&hide_border=true&count_private=true&bg_color=35,0b0c12,0e1535&title_color=fff&text_color=fff&icon_color=fff" />
 </p>
 
 <br>
