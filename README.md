@@ -1,6 +1,6 @@
 #                                                                        Hey there I'm Mohamed Emad
 # 💫 About Me:
-🔭 I mostly work on LLM's and computer vision projects <br><br>🌱 I’m currently learning more about Cross-Modal Learning <br><br>👯 My goal is to contribute to at least 10 AI related projects by the end of 2025 <br><br>📫 you can reach me via my email: mohamedemad66553@gmail.com <br><br>⚡ Fun fact: I like creating digital art and sketching (I'm not exactly good tho)
+🔭 I mostly work on LLM's and computer vision projects <br><br>🌱 I’m currently learning more about Cross-Modal Learning <br><br>👯 My goal is to contribute to at least 10 AI related projects by the end of 2025 <br><br>📫 you can reach me via my email: mohamedemad66553@gmail.com <br><br>⚡ Fun fact: I like drawing (I'm not exactly good at it tho)
 
 
 ## 🌐 Socials:
