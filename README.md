@@ -65,30 +65,15 @@
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true&count_private=true" />
-  <br/>
-  <img src="https://nirzak-streak-stats.vercel.app/?user=MohamedEmad300&theme=dark&hide_border=true" />
-</p>
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true&count_private=true)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=MohamedEmad300&theme=dark&hide_border=true)<br/>
 
 ## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=radical&no-frame=false&no-bg=true&margin-w=4" />
-</p>
+![](https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
 ### 🔝 Top Contributed Repo
-
-<p align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=MohamedEmad300&limit=5&theme=dark&combine_all_yearly_contributions=true" />
-</p>
+![](https://github-contributor-stats.vercel.app/api?username=MohamedEmad300&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
-
-<p align="center">
-  <a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=MohamedEmad300&icon=5&color=0" />
-  </a>
-</p>
+[![](https://visitcount.itsvg.in/api?id=MohamedEmad300&icon=5&color=0)](https://visitcount.itsvg.in)
