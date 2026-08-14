@@ -6,7 +6,7 @@
 
 ## 💫 About Me
 
-- 🔭 I mostly work on **LLMs** and **Computer Vision** projects
+- 🔭 I mostly work on **AI powered optimization** and **Computer Vision** projects
 - 🌱 Currently learning more about **Cross-Modal Learning**
 - 👯 Goal: keep contributing to meaningful AI projects and ship them publicly
 - 📫 Reach me at **mohamedemad66553@gmail.com**
