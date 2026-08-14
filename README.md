@@ -1,7 +1,7 @@
 <h1 align="center">Hey there, I'm Mohamed Emad 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2E9EF7&center=true&vCenter=true&width=500&lines=LLM+%26+Computer+Vision+Engineer;Exploring+Cross-Modal+Learning;Always+building+something+new" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2E9EF7&center=true&vCenter=true&width=500&lines=ML+Engineer;Exploring+Cross-Modal+Learning;Always+building+something+new" alt="Typing SVG" />
 </p>
 
 ## 💫 About Me
