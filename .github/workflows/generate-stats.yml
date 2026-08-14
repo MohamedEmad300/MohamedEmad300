@@ -17,29 +17,44 @@ jobs:
       - name: Create profile folder
         run: mkdir -p profile
 
+      # -f = fail (and keep the previous good file) on a non-2xx response instead of
+      # saving the error page as if it were the SVG; --retry = ride out brief blips.
       - name: Download stats card (dark)
-        run: curl -s "https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true&count_private=true" -o profile/stats-dark.svg
+        run: curl -fsS --retry 3 --retry-delay 5 "https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true&count_private=true" -o profile/stats-dark.svg
 
       - name: Download stats card (light)
-        run: curl -s "https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=default&hide_border=true&include_all_commits=true&count_private=true" -o profile/stats-light.svg
+        run: curl -fsS --retry 3 --retry-delay 5 "https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=default&hide_border=true&include_all_commits=true&count_private=true" -o profile/stats-light.svg
 
       - name: Download top languages card (dark)
-        run: curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEmad300&theme=dark&hide_border=true&layout=compact" -o profile/top-langs-dark.svg
+        run: curl -fsS --retry 3 --retry-delay 5 "https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEmad300&theme=dark&hide_border=true&layout=compact" -o profile/top-langs-dark.svg
 
       - name: Download top languages card (light)
-        run: curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEmad300&theme=default&hide_border=true&layout=compact" -o profile/top-langs-light.svg
+        run: curl -fsS --retry 3 --retry-delay 5 "https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEmad300&theme=default&hide_border=true&layout=compact" -o profile/top-langs-light.svg
 
       - name: Download streak stats (dark)
-        run: curl -s "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=dark&hide_border=true" -o profile/streak-dark.svg
+        run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=dark&hide_border=true" -o profile/streak-dark.svg
 
       - name: Download streak stats (light)
-        run: curl -s "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=default&hide_border=true" -o profile/streak-light.svg
+        run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=default&hide_border=true" -o profile/streak-light.svg
 
-      - name: Download trophies (dark)
-        run: curl -s "https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=radical&no-frame=false&no-bg=true&margin-w=4" -o profile/trophies-dark.svg
+      # The public github-profile-trophy.vercel.app instance is currently rejecting
+      # requests (rate-limited / quota errors), so it's generated in-workflow instead
+      # of fetched over HTTP — this sidesteps the shared instance entirely.
+      - name: Generate trophies (dark)
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: MohamedEmad300
+          theme: radical
+          output_path: profile/trophies-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download trophies (light)
-        run: curl -s "https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=flat&no-frame=false&no-bg=true&margin-w=4" -o profile/trophies-light.svg
+      - name: Generate trophies (light)
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: MohamedEmad300
+          theme: flat
+          output_path: profile/trophies-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push if changed
         run: |
