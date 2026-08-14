@@ -66,14 +66,30 @@
 ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=MohamedEmad300&theme=dark&hide_border=true)<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="profile/stats-light.svg">
+  <img src="profile/stats-dark.svg" alt="GitHub Stats" />
+</picture>
+<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile/streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="profile/streak-light.svg">
+  <img src="profile/streak-dark.svg" alt="GitHub Streak" />
+</picture>
+<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile/top-langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="profile/top-langs-light.svg">
+  <img src="profile/top-langs-dark.svg" alt="Top Languages" />
+</picture>
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=radical&no-frame=false&no-bg=true&margin-w=4)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=MohamedEmad300&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile/trophies-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="profile/trophies-light.svg">
+  <img src="profile/trophies-dark.svg" alt="GitHub Trophies" />
+</picture>
 
 ---
 [![](https://visitcount.itsvg.in/api?id=MohamedEmad300&icon=5&color=0)](https://visitcount.itsvg.in)
