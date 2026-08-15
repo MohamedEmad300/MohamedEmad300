@@ -1,8 +1,8 @@
 name: Generate GitHub Stats SVGs
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *" # Runs once a day at midnight UTC
+  workflow_dispatch: # Lets you trigger it manually from the Actions tab
 jobs:
   generate-stats:
     runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
           card: stats
           options: 'username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true'
           path: profile/stats-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_TOKEN }}
 
       - name: Generate stats card (light)
         uses: soulteary/github-readme-stats-action@v1.0.0
@@ -29,7 +29,7 @@ jobs:
           card: stats
           options: 'username=MohamedEmad300&theme=default&hide_border=true&include_all_commits=true'
           path: profile/stats-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_TOKEN }}
 
       - name: Generate top languages card (dark)
         uses: soulteary/github-readme-stats-action@v1.0.0
@@ -37,7 +37,7 @@ jobs:
           card: top-langs
           options: 'username=MohamedEmad300&theme=dark&hide_border=true&layout=compact'
           path: profile/top-langs-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_TOKEN }}
 
       - name: Generate top languages card (light)
         uses: soulteary/github-readme-stats-action@v1.0.0
@@ -45,8 +45,11 @@ jobs:
           card: top-langs
           options: 'username=MohamedEmad300&theme=default&hide_border=true&layout=compact'
           path: profile/top-langs-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_TOKEN }}
 
+      # -f = fail (and keep the previous good file) on a non-2xx response instead of
+      # saving the error page as if it were the SVG; --retry = ride out brief blips.
+      # continue-on-error so a flaky/paused instance doesn't block the rest of the job.
       - name: Download streak stats (dark)
         continue-on-error: true
         run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=dark&hide_border=true" -o profile/streak-dark.svg
@@ -55,9 +58,22 @@ jobs:
         continue-on-error: true
         run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=default&hide_border=true" -o profile/streak-light.svg
 
+      # Some renderers exit 0 even when they fail internally and instead embed an
+      # "Something went wrong" error card as the SVG output. Catch that here so a
+      # broken card never gets silently committed.
+      - name: Verify SVGs aren't error cards
+        run: |
+          for f in profile/stats-dark.svg profile/stats-light.svg profile/top-langs-dark.svg profile/top-langs-light.svg; do
+            if [ -f "$f" ] && grep -q "Something went wrong" "$f"; then
+              echo "::error::$f contains an error card, not a real stats SVG"
+              exit 1
+            fi
+          done
+
       # Trophy generation disabled for now — needs a PAT with read:user + public_repo
       # scopes (GITHUB_TOKEN doesn't have the right scope for the GraphQL user-info
-      # call this action makes). Re-enable once TROPHY_TOKEN secret is set up.
+      # call this action makes). Re-enable once ready by uncommenting below and
+      # reusing STATS_TOKEN (or a separate secret) as the token input.
       #
       # - name: Generate trophies (dark)
       #   uses: Erik-Donath/github-profile-trophy@feature/generate-svg
@@ -65,7 +81,7 @@ jobs:
       #     username: MohamedEmad300
       #     theme: radical
       #     file: profile/trophies-dark.svg
-      #     token: ${{ secrets.TROPHY_TOKEN }}
+      #     token: ${{ secrets.STATS_TOKEN }}
       #
       # - name: Generate trophies (light)
       #   uses: Erik-Donath/github-profile-trophy@feature/generate-svg
@@ -73,7 +89,7 @@ jobs:
       #     username: MohamedEmad300
       #     theme: flat
       #     file: profile/trophies-light.svg
-      #     token: ${{ secrets.TROPHY_TOKEN }}
+      #     token: ${{ secrets.STATS_TOKEN }}
 
       - name: Commit and push if changed
         run: |
