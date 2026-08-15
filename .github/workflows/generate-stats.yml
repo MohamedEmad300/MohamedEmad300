@@ -16,43 +16,37 @@ jobs:
         run: mkdir -p profile
 
       - name: Generate stats card (dark)
-        uses: soulteary/github-readme-stats-action@main
+        uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
-          username: MohamedEmad300
-          options: theme=dark&hide_border=true&include_all_commits=true&count_private=true
+          options: 'username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true'
           path: profile/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate stats card (light)
-        uses: soulteary/github-readme-stats-action@main
+        uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
-          username: MohamedEmad300
-          options: theme=default&hide_border=true&include_all_commits=true&count_private=true
+          options: 'username=MohamedEmad300&theme=default&hide_border=true&include_all_commits=true'
           path: profile/stats-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card (dark)
-        uses: soulteary/github-readme-stats-action@main
+        uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: top-langs
-          username: MohamedEmad300
-          options: theme=dark&hide_border=true&layout=compact
+          options: 'username=MohamedEmad300&theme=dark&hide_border=true&layout=compact'
           path: profile/top-langs-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card (light)
-        uses: soulteary/github-readme-stats-action@main
+        uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: top-langs
-          username: MohamedEmad300
-          options: theme=default&hide_border=true&layout=compact
+          options: 'username=MohamedEmad300&theme=default&hide_border=true&layout=compact'
           path: profile/top-langs-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Streak stats has no equivalent "run locally" action — keep the curl
-      # approach for this one, but don't let it fail the whole job
       - name: Download streak stats (dark)
         continue-on-error: true
         run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=dark&hide_border=true" -o profile/streak-dark.svg
@@ -66,7 +60,7 @@ jobs:
         with:
           username: MohamedEmad300
           theme: radical
-          output_path: profile/trophies-dark.svg
+          file: profile/trophies-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate trophies (light)
@@ -74,7 +68,7 @@ jobs:
         with:
           username: MohamedEmad300
           theme: flat
-          output_path: profile/trophies-light.svg
+          file: profile/trophies-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push if changed
