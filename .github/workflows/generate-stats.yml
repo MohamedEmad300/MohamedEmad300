@@ -70,26 +70,24 @@ jobs:
             fi
           done
 
-      # Trophy generation disabled for now — needs a PAT with read:user + public_repo
-      # scopes (GITHUB_TOKEN doesn't have the right scope for the GraphQL user-info
-      # call this action makes). Re-enable once ready by uncommenting below and
-      # reusing STATS_TOKEN (or a separate secret) as the token input.
-      #
-      # - name: Generate trophies (dark)
-      #   uses: Erik-Donath/github-profile-trophy@feature/generate-svg
-      #   with:
-      #     username: MohamedEmad300
-      #     theme: radical
-      #     file: profile/trophies-dark.svg
-      #     token: ${{ secrets.STATS_TOKEN }}
-      #
-      # - name: Generate trophies (light)
-      #   uses: Erik-Donath/github-profile-trophy@feature/generate-svg
-      #   with:
-      #     username: MohamedEmad300
-      #     theme: flat
-      #     file: profile/trophies-light.svg
-      #     token: ${{ secrets.STATS_TOKEN }}
+      # Needs a PAT with read:user + public_repo scopes — GITHUB_TOKEN doesn't have
+      # the right scope for the GraphQL user-info call this action makes, so it
+      # reuses STATS_TOKEN.
+      - name: Generate trophies (dark)
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: MohamedEmad300
+          theme: radical
+          file: profile/trophies-dark.svg
+          token: ${{ secrets.STATS_TOKEN }}
+
+      - name: Generate trophies (light)
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: MohamedEmad300
+          theme: flat
+          file: profile/trophies-light.svg
+          token: ${{ secrets.STATS_TOKEN }}
 
       - name: Commit and push if changed
         run: |
