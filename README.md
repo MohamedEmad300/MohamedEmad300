@@ -65,31 +65,28 @@
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
 
-# 📊 GitHub Stats:
+## 📊 GitHub Stats
+
+<div align="center">
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="profile/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="profile/stats-light.svg">
-  <img src="profile/stats-dark.svg" alt="GitHub Stats" />
+  <img src="profile/stats-dark.svg" alt="GitHub Stats" width="49%" />
 </picture>
-<br/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="profile/streak-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="profile/streak-light.svg">
-  <img src="profile/streak-dark.svg" alt="GitHub Streak" />
-</picture>
-<br/>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="profile/top-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="profile/top-langs-light.svg">
-  <img src="profile/top-langs-dark.svg" alt="Top Languages" />
+  <img src="profile/top-langs-dark.svg" alt="Top Languages" width="49%" />
 </picture>
 
-## 🏆 GitHub Trophies
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="profile/trophies-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="profile/trophies-light.svg">
-  <img src="profile/trophies-dark.svg" alt="GitHub Trophies" />
+  <source media="(prefers-color-scheme: dark)" srcset="profile/streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="profile/streak-light.svg">
+  <img src="profile/streak-dark.svg" alt="GitHub Streak" width="98%" />
 </picture>
+
+</div>
 
 ---
 [![](https://visitcount.itsvg.in/api?id=MohamedEmad300&icon=5&color=0)](https://visitcount.itsvg.in)
