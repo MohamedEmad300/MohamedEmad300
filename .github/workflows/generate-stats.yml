@@ -55,21 +55,25 @@ jobs:
         continue-on-error: true
         run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=default&hide_border=true" -o profile/streak-light.svg
 
-      - name: Generate trophies (dark)
-        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
-        with:
-          username: MohamedEmad300
-          theme: radical
-          file: profile/trophies-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate trophies (light)
-        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
-        with:
-          username: MohamedEmad300
-          theme: flat
-          file: profile/trophies-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # Trophy generation disabled for now — needs a PAT with read:user + public_repo
+      # scopes (GITHUB_TOKEN doesn't have the right scope for the GraphQL user-info
+      # call this action makes). Re-enable once TROPHY_TOKEN secret is set up.
+      #
+      # - name: Generate trophies (dark)
+      #   uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+      #   with:
+      #     username: MohamedEmad300
+      #     theme: radical
+      #     file: profile/trophies-dark.svg
+      #     token: ${{ secrets.TROPHY_TOKEN }}
+      #
+      # - name: Generate trophies (light)
+      #   uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+      #   with:
+      #     username: MohamedEmad300
+      #     theme: flat
+      #     file: profile/trophies-light.svg
+      #     token: ${{ secrets.TROPHY_TOKEN }}
 
       - name: Commit and push if changed
         run: |
