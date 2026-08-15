@@ -1,10 +1,8 @@
 name: Generate GitHub Stats SVGs
-
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs once a day at midnight UTC
-  workflow_dispatch: # Lets you trigger it manually from the Actions tab
-
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 jobs:
   generate-stats:
     runs-on: ubuntu-latest
@@ -17,29 +15,67 @@ jobs:
       - name: Create profile folder
         run: mkdir -p profile
 
-      - name: Download stats card (dark)
-        run: curl -s "https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=dark&hide_border=true&include_all_commits=true&count_private=true" -o profile/stats-dark.svg
+      - name: Generate stats card (dark)
+        uses: soulteary/github-readme-stats-action@main
+        with:
+          card: stats
+          username: MohamedEmad300
+          options: theme=dark&hide_border=true&include_all_commits=true&count_private=true
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download stats card (light)
-        run: curl -s "https://github-readme-stats.vercel.app/api?username=MohamedEmad300&theme=default&hide_border=true&include_all_commits=true&count_private=true" -o profile/stats-light.svg
+      - name: Generate stats card (light)
+        uses: soulteary/github-readme-stats-action@main
+        with:
+          card: stats
+          username: MohamedEmad300
+          options: theme=default&hide_border=true&include_all_commits=true&count_private=true
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download top languages card (dark)
-        run: curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEmad300&theme=dark&hide_border=true&layout=compact" -o profile/top-langs-dark.svg
+      - name: Generate top languages card (dark)
+        uses: soulteary/github-readme-stats-action@main
+        with:
+          card: top-langs
+          username: MohamedEmad300
+          options: theme=dark&hide_border=true&layout=compact
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download top languages card (light)
-        run: curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEmad300&theme=default&hide_border=true&layout=compact" -o profile/top-langs-light.svg
+      - name: Generate top languages card (light)
+        uses: soulteary/github-readme-stats-action@main
+        with:
+          card: top-langs
+          username: MohamedEmad300
+          options: theme=default&hide_border=true&layout=compact
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
+      # Streak stats has no equivalent "run locally" action — keep the curl
+      # approach for this one, but don't let it fail the whole job
       - name: Download streak stats (dark)
-        run: curl -s "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=dark&hide_border=true" -o profile/streak-dark.svg
+        continue-on-error: true
+        run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=dark&hide_border=true" -o profile/streak-dark.svg
 
       - name: Download streak stats (light)
-        run: curl -s "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=default&hide_border=true" -o profile/streak-light.svg
+        continue-on-error: true
+        run: curl -fsS --retry 3 --retry-delay 5 "https://streak-stats.demolab.com/?user=MohamedEmad300&theme=default&hide_border=true" -o profile/streak-light.svg
 
-      - name: Download trophies (dark)
-        run: curl -s "https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=radical&no-frame=false&no-bg=true&margin-w=4" -o profile/trophies-dark.svg
+      - name: Generate trophies (dark)
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: MohamedEmad300
+          theme: radical
+          output_path: profile/trophies-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download trophies (light)
-        run: curl -s "https://github-profile-trophy.vercel.app/?username=MohamedEmad300&theme=flat&no-frame=false&no-bg=true&margin-w=4" -o profile/trophies-light.svg
+      - name: Generate trophies (light)
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: MohamedEmad300
+          theme: flat
+          output_path: profile/trophies-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push if changed
         run: |
