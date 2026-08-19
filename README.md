@@ -7,7 +7,7 @@
 ## 💫 About Me 
 
 - 🔭 I mostly work on **AI powered optimization** and **Computer Vision** projects
-- 🌱 Currently learning more about **Cross-Modal Learning**
+- 🌱 Currently learning more about **Evolutionary RL**
 - 👯 Goal: keep contributing to meaningful AI projects and ship them publicly
 - 📫 Reach me at **mohamedemad66553@gmail.com**
 - ⚡ Fun fact: I like drawing (I'm not exactly good at it, though 😅)
